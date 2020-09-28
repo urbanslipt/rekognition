@@ -1,0 +1,27 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppBase" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">#003657</item>
+        <item name="colorPrimaryDark">#002E4B</item>
+        <item name="colorAccent">#E2E2E2</item>
+        <item name="fontFamily">sans-serif-thin</item>
+        <item name="android:textViewStyle">@style/RobotoThin</item>
+        <item name="android:editTextStyle">@style/RobotoThinEt</item>
+    </style>
+
+
+    <style name="RobotoThin" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-thin</item>
+    </style>
+    <style name="RobotoThinEt" parent="android:Widget.EditText">
+        <item name="android:fontFamily">sans-serif-thin</item>
+    </style>
+
+</resources>

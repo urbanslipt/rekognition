@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true"
+        android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="3dp"
+                android:bottomLeftRadius="3dp">
+            </corners>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD">
+            </stroke>
+            <solid
+                android:color="#FFFFFF" >
+            </solid>
+            <padding
+                android:left="10dp"
+                android:top="12dp"
+                android:right="10dp"
+                android:bottom="12dp" />
+        </shape>
+    </item>
+    <item android:state_enabled="true"
+        android:state_focused="false">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="3dp"
+                android:bottomLeftRadius="3dp">
+            </corners>
+            <stroke
+                android:width="1dp"
+                android:color="#F1F1F1">
+            </stroke>
+            <solid
+                android:color="#FFFFFF" >
+            </solid>
+            <padding
+                android:left="10dp"
+                android:top="12dp"
+                android:right="10dp"
+                android:bottom="12dp" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <layer-list>
+            <item android:top="0dp" android:left="0dp" android:bottom="0dp" android:right="-1dp">
+                <shape android:shape="rectangle">
+                    <corners
+                        android:topLeftRadius="3dp"
+                        android:bottomLeftRadius="3dp">
+                    </corners>
+                    <stroke
+                        android:width="1dp"
+                        android:color="#F1F1F1">
+                    </stroke>
+                    <solid
+                        android:color="#FFFFFF">
+                    </solid>
+                    <padding
+                        android:left="10dp"
+                        android:top="12dp"
+                        android:right="10dp"
+                        android:bottom="12dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
