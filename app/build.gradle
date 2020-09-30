@@ -21,12 +21,16 @@ android {
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/io.netty.versions.properties'
+        exclude 'META-INF/INDEX.LIST'
+
     }
 }
 
@@ -40,10 +44,21 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.869')
-    implementation 'com.amazonaws:aws-java-sdk-rekognition'
-
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+
+    // Amplify core dependency
+    implementation 'com.amplifyframework:core:1.4.0'
+
+    // Amplify plugins
+    implementation 'com.amplifyframework:aws-api:1.4.0'
+    implementation 'com.amplifyframework:aws-datastore:1.4.0'
+
+    implementation 'com.amplifyframework:aws-predictions:1.4.0'
+    implementation 'com.amplifyframework:aws-auth-cognito:1.4.0'
+
+    // Support for Java 8 features
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
+
 }

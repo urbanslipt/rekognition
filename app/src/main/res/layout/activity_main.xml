@@ -7,38 +7,31 @@
     android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etSearchFile"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/bg_input"
-        android:ems="10"
-        android:imeOptions="actionDone"
-        android:hint="Nombre del archivo"
-        android:drawableStart="@drawable/ic_search_gray"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/srlFiles"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/srlFiles"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="5dp"
         app:layout_constraintBottom_toTopOf="@+id/ln_upload_file"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSearchFile">
+        app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <ImageView
+            android:id="@+id/imageViewCanvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ImageView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <WebView
+        android:id="@+id/webViewJson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srlFiles" />
 
     <LinearLayout
         android:id="@+id/ln_upload_file"
@@ -90,12 +83,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ln_upload_file" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/srlFiles"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/srlFiles"
-        app:layout_constraintTop_toTopOf="@+id/srlFiles" />
 </androidx.constraintlayout.widget.ConstraintLayout>
